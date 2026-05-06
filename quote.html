@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Quote - GrantedWells Ltd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="assets/images/logo.png" alt="GrantedWells Ltd Logo"> GrantedWells Ltd</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="services.html">Services ▾</a>
+        <div class="dropdown-menu">
+          <a href="service-detail.html?service=pump">Pump Installation</a>
+          <a href="service-detail.html?service=purification">Water Purification</a>
+          <a href="service-detail.html?service=distillation">Distillation</a>
+          <a href="service-detail.html?service=maintenance">Maintenance</a>
+        </div>
+      </li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="quote.html" class="btn">Request Quote</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Request a Quote</h1>
+  <p>Get a personalized quote for our water solutions services</p>
+</section>
+
+<section>
+  <div id="message" style="display:none; padding:10px; margin-bottom:20px; border-radius:5px; background:#00BCD4; color:white; max-width:600px; margin:auto;"></div>
+  <form action="#" method="post" id="quoteForm" style="max-width:600px; margin:auto;">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="text" name="company" placeholder="Company Name (optional)">
+    <input type="text" name="location" placeholder="Location" required>
+    <input type="date" name="date" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <select name="service" id="service" required>
+      <option value="">Select Service</option>
+      <option value="pump">Pump Installation</option>
+      <option value="purification">Water Purification</option>
+      <option value="distillation">Distillation Systems</option>
+      <option value="maintenance">Repair & Maintenance</option>
+    </select>
+    <select name="maintenance_type" id="maintenance_type" style="display:none;" required>
+      <option value="">Select Maintenance Type</option>
+      <option value="corrective">Corrective Maintenance</option>
+      <option value="preventive">Preventive Maintenance</option>
+      <option value="predictive">Predictive Maintenance</option>
+      <option value="emergency">Emergency Maintenance</option>
+    </select>
+    <textarea name="message" placeholder="Additional Details" rows="5"></textarea>
+    <button type="submit" class="btn">Submit Quote Request</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2026 GrantedWells Ltd</p>
+</footer>
+
+<a href="https://wa.me/254796067812" class="whatsapp" target="_blank">💬</a>
+
+<script src="assets/js/main.js"></script>
+<script>
+document.getElementById('service').addEventListener('change', function() {
+  const maintenanceSelect = document.getElementById('maintenance_type');
+  if (this.value === 'maintenance') {
+    maintenanceSelect.style.display = 'block';
+  } else {
+    maintenanceSelect.style.display = 'none';
+  }
+});
+
+document.getElementById('quoteForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const messageDiv = document.getElementById('message');
+  messageDiv.textContent = 'Thank you! Your quote request has been sent successfully.';
+  messageDiv.style.display = 'block';
+  this.reset();
+  document.getElementById('maintenance_type').style.display = 'none';
+  setTimeout(() => {
+    messageDiv.style.display = 'none';
+  }, 5000);
+});
+</script>
+
+</body>
+</html>

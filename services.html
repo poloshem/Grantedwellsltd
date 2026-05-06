@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - GrantedWells Ltd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="assets/images/logo.png" alt="GrantedWells Ltd Logo"> GrantedWells Ltd</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Services ▾</a>
+        <div class="dropdown-menu">
+          <a href="service-detail.html?service=pump">Pump Installation</a>
+          <a href="service-detail.html?service=purification">Water Purification</a>
+          <a href="service-detail.html?service=distillation">Distillation</a>
+          <a href="service-detail.html?service=maintenance">Maintenance</a>
+        </div>
+      </li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="quote.html" class="btn">Request Quote</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Our Services</h1>
+  <p>Comprehensive water solutions for homes and businesses</p>
+</section>
+
+<section>
+  <div class="grid">
+    <div class="card">
+      <h3>Pump Installation</h3>
+      <p>Professional installation of various pump types for residential and commercial use.</p>
+      <a href="service-detail.html?service=pump" class="btn">Learn More</a>
+    </div>
+    <div class="card">
+      <h3>Water Purification</h3>
+      <p>Advanced purification systems to ensure clean and safe drinking water.</p>
+      <a href="service-detail.html?service=purification" class="btn">Learn More</a>
+    </div>
+    <div class="card">
+      <h3>Distillation Systems</h3>
+      <p>Efficient distillation solutions for high-purity water requirements.</p>
+      <a href="service-detail.html?service=distillation" class="btn">Learn More</a>
+    </div>
+    <div class="card">
+      <h3>Repair & Maintenance</h3>
+      <p>Reliable repair and regular maintenance services to keep your systems running.</p>
+      <a href="service-detail.html?service=maintenance" class="btn">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 GrantedWells Ltd</p>
+</footer>
+
+<a href="https://wa.me/254796067812" class="whatsapp" target="_blank">💬</a>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Details - GrantedWells Ltd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .hero {
+      background: linear-gradient(rgba(14,165,233,0.5), rgba(3,105,161,0.5)), url('assets/images/engineer.jpeg');
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="assets/images/logo.png" alt="GrantedWells Ltd Logo"> GrantedWells Ltd</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="services.html">Services ▾</a>
+        <div class="dropdown-menu">
+          <a href="?service=pump">Pump Installation</a>
+          <a href="?service=purification">Water Purification</a>
+          <a href="?service=distillation">Distillation</a>
+          <a href="?service=maintenance">Maintenance</a>
+        </div>
+      </li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="quote.html" class="btn">Request Quote</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1 id="service-title">Service Details</h1>
+  <p id="service-description">Detailed information about our services</p>
+</section>
+
+<section>
+  <div class="card" style="max-width:800px;margin:auto;" id="service-content">
+    <h2>Types of Pumps We Install</h2>
+    <ul style="list-style:none; padding:0;">
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/cent.jpeg" alt="Centrifugal Pump" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Centrifugal Pumps</strong><br>A dependable choice for everyday use such as tank filling, water transfer, and general supply.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/sub.webp" alt="Submersible Pump" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Submersible Pumps (Borehole Pumps)</strong><br>Installed directly inside boreholes and wells, these pumps are ideal for deep water sources and provide efficient, steady flow.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/booster.webp" alt="Booster Pump" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Booster Pumps</strong><br>Designed to improve low water pressure in buildings, ensuring smooth flow in taps, bathrooms, and irrigation systems.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/solar.webp" alt="Solar Water Pump" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Solar Water Pumps</strong><br>Cost-effective and eco-friendly systems powered by solar energy—perfect for rural and off-grid locations.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/jet.jpeg" alt="Jet Pump" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Jet Pumps</strong><br>Suitable for shallow and deep wells, commonly used in residential setups where boreholes are not too deep.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/highpre.webp" alt="High-Pressure Pump" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>High-Pressure Pumps</strong><br>Built for demanding applications such as irrigation, commercial use, and areas requiring strong water output.
+        </div>
+      </li>
+    </ul>
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>Professional installation and system setup</li>
+      <li>Site assessment and expert recommendations</li>
+      <li>Reliable, durable equipment</li>
+      <li>Support for both small and large projects</li>
+    </ul>
+    <p><strong>Get the Right Pump for Your Needs</strong><br>Not sure which system fits your situation? We assess your water source, depth, and usage to recommend the most efficient solution.</p>
+    <div style="display:flex; gap:10px; justify-content:center; margin-top:20px;">
+      <a href="tel:+254796067812" class="btn">Call Us Today</a>
+      <a href="contact.html" class="btn">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 GrantedWells Ltd</p>
+</footer>
+
+<a href="https://wa.me/254796067812" class="whatsapp" target="_blank">💬</a>
+
+<script src="assets/js/main.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const service = params.get('service');
+const titles = {
+  pump: 'Water Pump Installation Services',
+  purification: 'Water Purification Services',
+  distillation: 'Water Distillation Services',
+  maintenance: 'Repair & Maintenance'
+};
+const descriptions = {
+  pump: 'We install reliable water pump systems for homes, businesses, farms, and institutions. Whether you need a new installation or an upgrade, we provide solutions that ensure consistent water supply and long-term performance.',
+  purification: 'We provide effective water purification solutions to ensure your water is clean, safe, and suitable for everyday use. Whether for drinking, cooking, or general supply, our systems are designed for reliability and long-term performance.',
+  distillation: 'We provide professional water distillation solutions for clients who require the highest level of water purity. Our systems are designed to deliver clean, safe, and contaminant-free water for homes, businesses, and specialized applications.',
+  maintenance: 'We provide professional maintenance services to ensure your water systems and equipment operate efficiently, reliably, and without unexpected breakdowns. Our approach is designed to extend the lifespan of your systems and reduce costly repairs.'
+};
+document.getElementById('service-title').textContent = titles[service] || 'Service Details';
+document.getElementById('service-description').textContent = descriptions[service] || 'Detailed information about our services';
+const pumpContent = `<h2>Types of Pumps We Install</h2>
+    <ul style="list-style:none; padding:0;">
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/cent.jpeg" alt="Centrifugal Pump" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Centrifugal Pumps</strong><br>A dependable choice for everyday use such as tank filling, water transfer, and general supply.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/sub.webp" alt="Submersible Pump" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Submersible Pumps (Borehole Pumps)</strong><br>Installed directly inside boreholes and wells, these pumps are ideal for deep water sources and provide efficient, steady flow.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/booster.webp" alt="Booster Pump" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Booster Pumps</strong><br>Designed to improve low water pressure in buildings, ensuring smooth flow in taps, bathrooms, and irrigation systems.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/solar.webp" alt="Solar Water Pump" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Solar Water Pumps</strong><br>Cost-effective and eco-friendly systems powered by solar energy—perfect for rural and off-grid locations.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/jet.jpeg" alt="Jet Pump" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Jet Pumps</strong><br>Suitable for shallow and deep wells, commonly used in residential setups where boreholes are not too deep.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/highpre.webp" alt="High-Pressure Pump" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>High-Pressure Pumps</strong><br>Built for demanding applications such as irrigation, commercial use, and areas requiring strong water output.
+        </div>
+      </li>
+    </ul>
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>Professional installation and system setup</li>
+      <li>Site assessment and expert recommendations</li>
+      <li>Reliable, durable equipment</li>
+      <li>Support for both small and large projects</li>
+    </ul>
+    <p><strong>Get the Right Pump for Your Needs</strong><br>Not sure which system fits your situation? We assess your water source, depth, and usage to recommend the most efficient solution.</p>
+    <div style="display:flex; gap:10px; justify-content:center; margin-top:20px;">
+      <a href="tel:+254796067812" class="btn">Call Us Today</a>
+      <a href="quote.html" class="btn">Request a Quote</a>
+    </div>`;
+const purificationContent = `<h2>Types of Purification Systems We Offer</h2>
+    <ul style="list-style:none; padding:0;">
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/reverseosmosis.jpeg" alt="Reverse Osmosis System" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Reverse Osmosis (RO) Systems</strong><br>Ideal for removing dissolved salts, chemicals, and impurities—especially in borehole or hard water sources.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/uv.jpeg" alt="UV Purifier" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>UV (Ultraviolet) Purifiers</strong><br>Use advanced UV technology to eliminate bacteria and viruses without affecting taste or odor.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/carbonfilters.jpeg" alt="Carbon Filters" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Sediment & Carbon Filters</strong><br>Remove dirt, sand, rust, chlorine, and unwanted smells—improving overall water quality.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/softner.jpeg" alt="Water Softener" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Water Softeners</strong><br>Protect your plumbing and appliances by reducing hardness caused by excess minerals.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/chlorination.jpeg" alt="Chlorination System" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Chlorination Systems</strong><br>Effective for disinfecting water in storage tanks and larger systems, ensuring it is safe for use.
+        </div>
+      </li>
+    </ul>
+    <h2>Why Choose Our Purification Solutions?</h2>
+    <ul>
+      <li>Professional installation and system setup</li>
+      <li>Water quality assessment and expert advice</li>
+      <li>Durable, high-performance equipment</li>
+      <li>Solutions for homes, businesses, and institutions</li>
+    </ul>
+    <p><strong>Clean Water Starts Here</strong><br>Not sure which system you need? We test and analyze your water to recommend the most effective treatment solution.</p>
+    <div style="display:flex; gap:10px; justify-content:center; margin-top:20px;">
+      <a href="tel:+254796067812" class="btn">Call Us Today</a>
+      <a href="quote.html" class="btn">Request a Quote</a>
+    </div>`;
+const distillationContent = `<h2>How Distillation Works</h2>
+    <p>Water is heated to produce steam, leaving behind impurities such as salts, heavy metals, and microorganisms. The steam is then cooled and condensed back into purified water.</p>
+    <h2>Types of Distillation Systems We Offer</h2>
+    <ul style="list-style:none; padding:0;">
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/domesticdistil.jpeg" alt="Domestic Distiller" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Domestic Distillers</strong><br>Compact and efficient systems suitable for home use, providing high-quality drinking water.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/distill.jpeg" alt="Industrial Distillation System" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Industrial Distillation Systems</strong><br>Heavy-duty solutions designed for demanding environments such as medical facilities, laboratories, and manufacturing plants.
+        </div>
+      </li>
+      <li style="display:flex; align-items:flex-start; margin-bottom:20px;">
+        <img src="assets/images/distill2.jpeg" alt="Commercial Distillation Unit" style="width:150px; height:auto; margin-right:20px; border-radius:8px;">
+        <div>
+          <strong>Commercial Distillation Units</strong><br>Built for businesses and institutions that require a consistent supply of purified water in larger volumes.
+        </div>
+      </li>
+    </ul>
+    <h2>Why Choose Our Distillation Solutions?</h2>
+    <ul>
+      <li>High-purity water output</li>
+      <li>Professional installation and system setup</li>
+      <li>Reliable and durable equipment</li>
+      <li>Suitable for both small and large-scale use</li>
+    </ul>
+    <p><strong>Pure Water for Every Need</strong><br>Not sure if distillation is the right option? We assess your requirements and recommend the most effective solution for your setup.</p>
+    <div style="display:flex; gap:10px; justify-content:center; margin-top:20px;">
+      <a href="tel:+254796067812" class="btn">Call Us Today</a>
+      <a href="quote.html" class="btn">Request a Quote</a>
+    </div>`;
+const maintenanceContent = `<h2>Types of Maintenance Services We Offer</h2>
+    <ul style="list-style:none; padding:0;">
+      <li style="margin-bottom:20px;">
+        <strong>Corrective Maintenance</strong><br>We diagnose and repair faults when equipment fails. This includes fixing pumps, replacing damaged components, and restoring full system operation.
+      </li>
+      <li style="margin-bottom:20px;">
+        <strong>Preventive Maintenance</strong><br>Scheduled servicing carried out at regular intervals to prevent breakdowns. This includes inspections, cleaning, lubrication, and part replacements to keep your system running smoothly.
+      </li>
+      <li style="margin-bottom:20px;">
+        <strong>Predictive Maintenance</strong><br>Advanced monitoring of system performance to detect potential issues before they become major problems. This helps minimize downtime and avoid unnecessary repairs.
+      </li>
+      <li style="margin-bottom:20px;">
+        <strong>Emergency Maintenance</strong><br>Rapid response services for urgent situations where immediate repair is required to restore water supply and system functionality.
+      </li>
+    </ul>
+    <h2>Why Choose Our Maintenance Services?</h2>
+    <ul>
+      <li>Timely and professional support</li>
+      <li>Reduced downtime and repair costs</li>
+      <li>Extended equipment lifespan</li>
+      <li>Tailored maintenance plans for your needs</li>
+    </ul>
+    <p><strong>Keep Your System Running Efficiently</strong><br>Regular maintenance is key to a reliable water system. Let our team help you prevent breakdowns and maintain optimal performance.</p>
+    <div style="display:flex; gap:10px; justify-content:center; margin-top:20px;">
+      <a href="contact.html" class="btn">Contact Us Today</a>
+      <a href="quote.html" class="btn">Request a Support Plan</a>
+    </div>`;
+if (service === 'pump') {
+  document.getElementById('service-content').innerHTML = pumpContent;
+} else if (service === 'purification') {
+  document.getElementById('service-content').innerHTML = purificationContent;
+} else if (service === 'distillation') {
+  document.getElementById('service-content').innerHTML = distillationContent;
+} else if (service === 'maintenance') {
+  document.getElementById('service-content').innerHTML = maintenanceContent;
+} else {
+  document.getElementById('service-content').innerHTML = '<p>Content coming soon.</p>';
+}
+</script>
+
+</body>
+</html>

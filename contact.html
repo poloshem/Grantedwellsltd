@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - GrantedWells Ltd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="assets/images/logo.png" alt="GrantedWells Ltd Logo"> GrantedWells Ltd</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="services.html">Services ▾</a>
+        <div class="dropdown-menu">
+          <a href="service-detail.html?service=pump">Pump Installation</a>
+          <a href="service-detail.html?service=purification">Water Purification</a>
+          <a href="service-detail.html?service=distillation">Distillation</a>
+          <a href="service-detail.html?service=maintenance">Maintenance</a>
+        </div>
+      </li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="quote.html" class="btn">Request Quote</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Contact Us</h1>
+  <p>Get in touch for your water solution needs</p>
+</section>
+
+<section>
+  <h2>Send us a message</h2>
+  <div id="message" style="display:none; padding:10px; margin-bottom:20px; border-radius:5px; background:#00BCD4; color:white; max-width:500px; margin:auto;"></div>
+  <form id="contactForm">
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Message"></textarea>
+    <button class="btn">Submit</button>
+  </form>
+</section>
+
+<section>
+  <div class="card" style="max-width:500px;margin:auto;">
+    <h2>Contact Information</h2>
+    <p><strong>Phone:</strong> +254 796 067 812</p>
+    <p><strong>Email:</strong> info@grantedwells.co.ke</p>
+    <p><strong>Address:</strong> Nairobi, Kenya</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 GrantedWells Ltd</p>
+</footer>
+
+<a href="https://wa.me/254796067812" class="whatsapp" target="_blank">💬</a>
+
+<script src="assets/js/main.js"></script>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const messageDiv = document.getElementById('message');
+  messageDiv.textContent = 'Thank you! Your message has been sent successfully.';
+  messageDiv.style.display = 'block';
+  this.reset();
+  setTimeout(() => {
+    messageDiv.style.display = 'none';
+  }, 5000);
+});
+</script>
+
+</body>
+</html>

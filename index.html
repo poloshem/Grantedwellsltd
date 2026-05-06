@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrantedWells Ltd</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="assets/images/logo.png" alt="GrantedWells Ltd Logo"> GrantedWells Ltd</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="services.html">Services ▾</a>
+        <div class="dropdown-menu">
+          <a href="service-detail.html?service=pump">Pump Installation</a>
+          <a href="service-detail.html?service=purification">Water Purification</a>
+          <a href="service-detail.html?service=distillation">Distillation</a>
+          <a href="service-detail.html?service=maintenance">Maintenance</a>
+        </div>
+      </li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="quote.html" class="btn">Request Quote</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Reliable Water Solutions Across Kenya</h1>
+  <p>Professional installation, repair & maintenance of pumps, purification and distillation systems</p>
+  <p><strong>Serving Nairobi & surrounding regions • 10+ Years Experience • 500+ Installations</strong></p>
+  <div class="hero-cta">
+      <a href="quote.html" class="btn">Request Quote</a>
+      <a href="tel:+254796067812" class="btn secondary">Call Now</a>
+  </div>
+</section>
+
+<section>
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Pump Installation</h3>
+      <img src="assets/images/cent.jpeg" alt="Centrifugal Pump" style="width:100%; height:250px; object-fit:cover; margin-top:10px; border-radius:8px;">
+    </div>
+    <div class="card">
+      <h3>Water Purification</h3>
+      <img src="assets/images/reverseosmosis.jpeg" alt="Reverse Osmosis System" style="width:100%; height:250px; object-fit:cover; margin-top:10px; border-radius:8px;">
+    </div>
+    <div class="card">
+      <h3>Distillation Systems</h3>
+      <img src="assets/images/domesticdistil.jpeg" alt="Domestic Distiller" style="width:100%; height:250px; object-fit:cover; margin-top:10px; border-radius:8px;">
+    </div>
+    <div class="card">
+      <h3>Repair & Maintenance</h3>
+      <img src="assets/images/engineer.jpeg" alt="Maintenance Engineer" style="width:100%; height:250px; object-fit:cover; margin-top:10px; border-radius:8px;">
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Why Choose Us</h2>
+  <div class="card" style="max-width:700px;margin:auto;">
+    <ul style="line-height:1.8; padding-left:20px;">
+      <li>✔ Certified and experienced technicians</li>
+      <li>✔ High-quality and durable equipment</li>
+      <li>✔ Fast response and reliable support</li>
+      <li>✔ Affordable and transparent pricing</li>
+      <li>✔ Tailored solutions for homes and businesses</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Message"></textarea>
+    <button class="btn">Submit</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2026 GrantedWells Ltd</p>
+</footer>
+
+<a href="https://wa.me/254796067812" class="whatsapp" target="_blank">💬</a>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
